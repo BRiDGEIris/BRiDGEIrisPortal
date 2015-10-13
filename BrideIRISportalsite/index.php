@@ -150,7 +150,7 @@ include('session.php');
 		<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
 		</div>
 		</div>
-			 <h5><I><a href="BASE_URL_CLINIPHENOME"> CliniPhenome</a></I></h5>
+			 <h5><I><a href="BASE_URL_CLINIPHENOME" target="_blank"> CliniPhenome</a></I></h5>
 		</div>
 		</div>
 
