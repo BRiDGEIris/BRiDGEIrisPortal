@@ -14,7 +14,7 @@ output: html_document
 run
 
 ```
-build.sh
+(sudo) build.sh
 ```
 
 This creates a container named 'portal'
@@ -24,7 +24,7 @@ This creates a container named 'portal'
 run
 
 ```
-docker run -p 80:80 -it portal
+(sudo) docker run -p 80:80 -it portal
 ```
 
 ### Connect from Browser
