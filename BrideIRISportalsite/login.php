@@ -12,7 +12,7 @@ else
 // Define $username and $password
 $username=$_POST['username'];
 $password=$_POST['password'];
-$usertype=$_POST['element_3'];
+//$usertype=$_POST['element_3'];
 
 // Create connection with the database
 $connection = mysql_connect($servername, $dbuser, $dbpassword);
