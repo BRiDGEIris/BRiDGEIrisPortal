@@ -43,7 +43,7 @@ $logout = "You have successfully logged off. To access the database, kindly logi
 				</div>
 			<div class="row">
 				<div class="col-md-8">
-					<strong>Email: </strong>admin@bridgeiris.com
+					<strong>Email: </strong>Dipankar.Sengupta@vub.ac.be
 					&nbsp;&nbsp;
 					<strong>Support: </strong>+32-465833483
 				</div>
@@ -53,7 +53,7 @@ $logout = "You have successfully logged off. To access the database, kindly logi
 
 	<hr>
 	<span><b><center><?php echo $logout; ?></b></center></span>
-	<h3><center><a href = "bridgeiris.php">BRiDGEIRIS Portal</a><center><h3>
+	<h3><center><a href = "index.php">BRiDGEIRIS Portal</a><center><h3>
 </div>
 
 

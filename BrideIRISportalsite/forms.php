@@ -36,7 +36,7 @@ include('session.php');
 			                </div>
 			            <div class="row">
 			                <div class="col-md-8">
-			                    <strong>Email: </strong>admin@bridgeiris.com
+			                    <strong>Email: </strong>Dipankar.Sengupta@vub.ac.be
 			                    &nbsp;&nbsp;
 			                    <strong>Support: </strong>+32-465833483
 			                </div>
@@ -100,7 +100,7 @@ include('session.php');
                 <div class="col-md-12">
                     <div class="navbar-collapse collapse ">
                         <ul id="menu-top" class="nav navbar-nav navbar-right">
-                            <li><a href="index.php">Dashboard</a></li>
+                            <li><a href="home.php">Dashboard</a></li>
                             <li><a href="ui.php">Search Patient</a></li>
                             <!--<li><a href="table.html">Data Tables</a></li> -->
                             <li><a class="menu-top-active"  href="forms.php">Forms</a></li>

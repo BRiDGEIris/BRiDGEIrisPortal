@@ -12,7 +12,6 @@ else
 // Define $username and $password
 $username=$_POST['username'];
 $password=$_POST['password'];
-//$usertype=$_POST['element_3'];
 
 // Create connection with the database
 $connection = mysql_connect($servername, $dbuser, $dbpassword);
@@ -37,7 +36,7 @@ $_SESSION['login_user']=$username; // Initializing Session
 if($usertype == "admin"){
 header("location: ClinicalDBHome.php"); // Redirecting To Admin Page
 }
-else {header("location: index.php"); // Redirecting To Anonymous Page
+else {header("location: home.php"); // Redirecting To Anonymous Page
 }
 } else {
 $error = "Username or Password is invalid.";
