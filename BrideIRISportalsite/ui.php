@@ -1,7 +1,33 @@
 <?php
 include('session.php');
+include('submit_digest.php');
 if (isset($_POST['submit']))
 {
+echo "<head>
+<link href='assets/css/bootstrap.css' rel='stylesheet' />
+<link href='assets/css/font-awesome.css' rel='stylesheet' />
+<link href='assets/css/style.css' rel='stylesheet' />
+</head>
+<body>
+    <header>
+	<div class='container'>
+				<div class='row' align = 'center'>
+				<div class='col-md-12'>
+								<h2 style='color:#FAFAD2'><u>BridgeIRIS Portal </u></h2>
+					</div>
+					</div>
+				<div class='row'>
+					<div class='col-md-8'>
+						<strong>Email: </strong>Dipankar.Sengupta@vub.ac.be
+						&nbsp;&nbsp;
+						<strong>Support: </strong>+32-465833483
+					</div>
+		</div></header>
+		</body>"."<br><br>";
+
+echo "<a href = 'ui.php'>RETURN: New Search</a><br>";
+echo "<h2><u>PATIENT SAMPLES AVAILABLE IN CLINIPHENOME</u></h2>";
+
  if (empty($_POST['ontid']))
   {
 	$error = "Please enter a ontology name to search for Patients.";
@@ -25,17 +51,20 @@ if (isset($_POST['submit']))
 	if ($_POST['ontid'])
 	{
    	//SELECT
-   	$query = "SELECT * FROM PATIENT P, patient_ontology o, sample s WHERE o.ONT_KEYWORD Like '%$ontid%' AND P.PATIENT_ID = S.PATIENT_ID AND P.PATIENT_ID = o.PATIENT_ID";
+   	$query = "SELECT *, CASE WHEN s.BIOBANK_ID = 5 THEN 'EUR' WHEN s.BIOBANK_ID = 1 THEN 'EUR' ELSE '1000Genome' END AS ETHNICITY FROM patient p, patient_ontology o, sample s, biobank b WHERE o.ONT_KEYWORD Like '%$ontid%' AND o.PATIENT_ID = p.PATIENT_ID AND p.PATIENT_ID = s.PATIENT_ID AND s.BIOBANK_ID = b.BIOBANK_ID AND b.BIOBANK_ID";
    	$result = mysql_query($query);
 
    	 if (mysql_num_rows($result) > 0)
    		{
    		  while($row = mysql_fetch_array($result, MYSQL_ASSOC))
 			{
-			 echo "<b>". "PATIENT-ID: " . "</b>". $row[PATIENT_ID ]. "; ". "<b>". "SAMPLE #: " . "</b>". $row["SAMPLE_ID" ]. "; "."<b>"."PHENOTYPE ONTOLOGY TERM: " . "</b>". $row["ONT_KEYWORD"]. "<br><br>";
+			 echo "<b>". "PATIENT ID: " . "</b>". $row[PATIENT_ID ]. "; "."<b>". "DATA SOURCE: " . "</b>". $row[NAME_OF_BIOBANK ]. "; ". "<b>". "SAMPLE #: " . "</b>". $row["SAMPLE_ID" ]. "; "."<b>"."PATHOLOGY: " . "</b>". $row["ONT_KEYWORD"]."; ". "<b>". "GENDER: " . "</b>". $row["GENDER" ]."; ". "<b>". "SUPER POPULATION: " . "</b>". $row["ETHNICITY" ]. "; ". "<b>". "ANALYZE IN DiGEST: " . "</b>"."<a target='_blank' href= http://bridgeiris.ulb.ac.be:82/digest/?sample_id=".$row["SAMPLE_ID"]. ">CONNECT TO DiGEST</a><br>";
 
-			 $row_array['SAMPLE_ID'] = $row['SAMPLE_ID'];
-			 $row_array['PHENOTYPE_TERM'] = $row['ONT_KEYWORD'];
+			 $row_array['DATA SOURCE'] = $row['NAME_OF_BIOBANK'];
+			 $row_array['SAMPLE ID'] = $row['SAMPLE_ID'];
+			 $row_array['PHENOTYPE TERM'] = $row['ONT_KEYWORD'];
+			 $row_array['GENDER'] = $row['GENDER'];
+			 $row_array['SUPER POPULATION'] = $row['ETHNICITY'];
 
 			  //push the values in the array
         	 array_push($json_response,$row_array);
@@ -47,12 +76,12 @@ if (isset($_POST['submit']))
    	}
 
 	//Create the JSON file and write
+		$jsonDataEncoded = json_encode($json_response);
 	    $fp = fopen ('sampledata.json','w');
-	    fwrite ($fp, json_encode($json_response));
+	    fwrite ($fp, $jsonDataEncoded);
     	fclose($fp);
 
-   	echo '<br><br>'.'<a href = "ui.php">RETURN</a>'.'<br>';
-   	echo '<br><br>'.'<a href = "sampledata.json">CLICK FOR JSON</a>'.'<br><br>';
+   	echo '<br><br>'.'<a href = "sampledata.json" target="_blank">CLICK FOR JSON</a>'.'<br><br>';
 	$conn->close();
   }
 }
