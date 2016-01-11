@@ -140,7 +140,7 @@ include('session.php');
 		<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
 		</div>
 		</div>
-				 <h5><a href = "http://sites.uclouvain.be/highlander/" target="_blank"> HIGHLANDER </a></I></h5>
+				 <h5><a href = "http://sites.uclouvain.be/highlander/download.html" target="_blank"> HIGHLANDER </a></I></h5>
 			</div>
 		</div>
 
