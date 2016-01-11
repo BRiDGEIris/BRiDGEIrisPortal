@@ -80,7 +80,7 @@ include('session.php');
 										</div>
 										<hr />
 										<h5><strong>Personal Bio : </strong></h5>
-										Testing I am a doctor!
+										I am a Doctor!
 										<hr />
                                 <a href="#" class="btn btn-info btn-sm">Full Profile</a>&nbsp; <a href="logout.php" class="btn btn-danger btn-sm">Logout</a>
 

@@ -47,6 +47,7 @@ echo "<h2><u>PATIENT SAMPLES AVAILABLE IN CLINIPHENOME</u></h2>";
 
    	 //Create an array
     $json_response = array();
+    $response = array();
 
 	if ($_POST['ontid'])
 	{
@@ -56,7 +57,7 @@ echo "<h2><u>PATIENT SAMPLES AVAILABLE IN CLINIPHENOME</u></h2>";
 
    	 if (mysql_num_rows($result) > 0)
    		{
-   		  while($row = mysql_fetch_array($result, MYSQL_ASSOC))
+   		 while($row = mysql_fetch_array($result, MYSQL_ASSOC))
 			{
 			 echo "<b>". "PATIENT ID: " . "</b>". $row[PATIENT_ID ]. "; "."<b>". "DATA SOURCE: " . "</b>". $row[NAME_OF_BIOBANK ]. "; ". "<b>". "SAMPLE #: " . "</b>". $row["SAMPLE_ID" ]. "; "."<b>"."PATHOLOGY: " . "</b>". $row["ONT_KEYWORD"]."; ". "<b>". "GENDER: " . "</b>". $row["GENDER" ]."; ". "<b>". "SUPER POPULATION: " . "</b>". $row["ETHNICITY" ]. "; ". "<b>". "ANALYZE IN DiGEST: " . "</b>"."<a target='_blank' href= http://bridgeiris.ulb.ac.be:82/digest/?sample_id=".$row["SAMPLE_ID"]. ">CONNECT TO DiGEST</a><br>";
 
@@ -68,7 +69,10 @@ echo "<h2><u>PATIENT SAMPLES AVAILABLE IN CLINIPHENOME</u></h2>";
 
 			  //push the values in the array
         	 array_push($json_response,$row_array);
+        	 array_push($response,$row_array['SAMPLE ID']);
    			}
+   			$result_array = implode(',', $response);
+   			echo "<br><b>". "ANALYZE ALL THE SAMPLES IN DiGEST: " . "</b>"."<a target='_blank' href= http://bridgeiris.ulb.ac.be:82/digest/?sample_id=".$result_array. ">CONNECT TO DiGEST</a><br>";
    		}
    	 else {
 	   		echo "There are no records of patients in the database for the specified ontology search term.";
@@ -81,7 +85,7 @@ echo "<h2><u>PATIENT SAMPLES AVAILABLE IN CLINIPHENOME</u></h2>";
 	    fwrite ($fp, $jsonDataEncoded);
     	fclose($fp);
 
-   	echo '<br><br>'.'<a href = "sampledata.json" target="_blank">CLICK FOR JSON</a>'.'<br><br>';
+   	echo '<br>'.'<a href = "sampledata.json" target="_blank">CLICK FOR JSON</a>'.'<br><br>';
 	$conn->close();
   }
 }
@@ -167,7 +171,7 @@ echo "<h2><u>PATIENT SAMPLES AVAILABLE IN CLINIPHENOME</u></h2>";
 													</div>
 													<hr />
 													<h5><strong>Personal Bio : </strong></h5>
-													Testing I am a doctor!
+													I am a Doctor!
 									<hr />
                                 <a href="#" class="btn btn-info btn-sm">Full Profile</a>&nbsp; <a href="logout.php" class="btn btn-danger btn-sm">Logout</a>
 

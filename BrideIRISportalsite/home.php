@@ -83,7 +83,7 @@ include('session.php');
                                 </div>
                                 <hr />
                                 <h5><strong>Personal Bio : </strong></h5>
-                                Testing I am a doctor!
+                                I am a Doctor!
                                 <hr />
                                 <a href="#" class="btn btn-info btn-sm">Full Profile</a>&nbsp; <a href="logout.php" class="btn btn-danger btn-sm">Logout</a>
 
@@ -140,7 +140,7 @@ include('session.php');
 		<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
 		</div>
 		</div>
-				 <h5>HIGHLANDER </h5>
+				 <h5><a href = "http://sites.uclouvain.be/highlander/" target="_blank"> HIGHLANDER </a></I></h5>
 			</div>
 		</div>
 
@@ -152,7 +152,7 @@ include('session.php');
 		<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
 		</div>
 		</div>
-			 <h5><I><a href = "http://localhost/ClinicalDBHome.php" target="_blank"> CliniPhenome</a></I></h5>
+			 <h5><I><a href =  "http://bridgeiris.ulb.ac.be/cliniphenome/" target="_blank"> CliniPhenome</a></I></h5>
 		</div>
 		</div>
 
@@ -187,7 +187,7 @@ include('session.php');
 		<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
 		</div>
 		</div>
-			 <h5>Variant Classification Tool</h5>
+			 <h5><I><a href = "http://bridgeiris.ulb.ac.be/" target="_blank">Variant Classification Tool</a></I></h5>
 		</div>
 		</div>
 
