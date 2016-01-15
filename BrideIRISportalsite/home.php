@@ -164,7 +164,7 @@ include('session.php');
 		<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
 		</div>
 		</div>
-				 <h5><I><a href = "http://dida.ibsquare.be/" target="_blank"> DIDA</a></I></h5>
+				 <h5><a href = "http://dida.ibsquare.be/" target="_blank"> DIDA</a></h5>
 			</div>
 		</div>
 
@@ -331,7 +331,7 @@ include('session.php');
         <div class="container">
             <div class="row" align = "center">
                 <div class="col-md-12">
-                    &copy; 2016 <a href="http://bridgeiris.ibsquare.be/" target="_blank"> BridgeIRIS </a> | Powered By : <a href="http://www.innoviris.be/" target="_blank">INNOVIRIS</a>
+                    &copy; 2015 <a href="http://bridgeiris.ibsquare.be/" target="_blank"> BridgeIRIS </a> | Powered By : <a href="http://www.innoviris.be/" target="_blank">INNOVIRIS</a>
                 </div>
 
             </div>
