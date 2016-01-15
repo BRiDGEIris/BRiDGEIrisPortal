@@ -140,19 +140,19 @@ include('session.php');
 		<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
 		</div>
 		</div>
-				 <h5><a href = "http://sites.uclouvain.be/highlander/download.html" target="_blank"> HIGHLANDER </a></I></h5>
+				 <h5><a href = "http://sites.uclouvain.be/highlander/download.html" target="_blank"> HIGHLANDER </a></h5>
 			</div>
 		</div>
 
 
 		<div class="col-md-2 col-sm-3 col-xs-6">
-		<div class="dashboard-div-wrapper bk-clr-two">
+		<div class="dashboard-div-wrapper bk-clr-one">
 			<i  class="fa fa-edit dashboard-div-icon" ></i>
 			<div class="progress progress-striped active">
 		<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
 		</div>
 		</div>
-			 <h5><I><a href =  "http://bridgeiris.ulb.ac.be/cliniphenome/" target="_blank"> CliniPhenome</a></I></h5>
+			 <h5><a href =  "http://bridgeiris.ulb.ac.be/cliniphenome/" target="_blank"> CliniPhenome</a></h5>
 		</div>
 		</div>
 
@@ -176,7 +176,7 @@ include('session.php');
 		<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
 		</div>
 		</div>
-			 <h5><I><a href = "http://bridgeiris.ulb.ac.be:82/digest/" target="_blank">Variant Ranking Tool</a></I></h5>
+			 <h5><a href = "http://bridgeiris.ulb.ac.be:82/digest/" target="_blank"><font color = "white">DiGEST</font></a></h5>
 		</div>
 		</div>
 
@@ -187,7 +187,7 @@ include('session.php');
 		<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
 		</div>
 		</div>
-			 <h5><I><a href = "http://bridgeiris.ulb.ac.be:81/gevact/" target="_blank">Variant Classification Tool</a></I></h5>
+			 <h5><a href = "http://bridgeiris.ulb.ac.be:81/gevact/" target="_blank"><font color = "white">GeVaCT</font></a></h5>
 		</div>
 		</div>
 
@@ -331,7 +331,7 @@ include('session.php');
         <div class="container">
             <div class="row" align = "center">
                 <div class="col-md-12">
-                    &copy; 2015 <a href="http://bridgeiris.ibsquare.be/" target="_blank"> BridgeIRIS </a> | Powered By : <a href="http://www.innoviris.be/" target="_blank">INNOVIRIS</a>
+                    &copy; 2016 <a href="http://bridgeiris.ibsquare.be/" target="_blank"> BridgeIRIS </a> | Powered By : <a href="http://www.innoviris.be/" target="_blank">INNOVIRIS</a>
                 </div>
 
             </div>
