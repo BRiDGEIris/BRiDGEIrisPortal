@@ -38,14 +38,14 @@ $logout = "You have successfully logged off. To access the database, kindly logi
 		<div class="container">
 			<div class="row" align = "center">
 			<div class="col-md-12">
-							<h2 style="color:#FAFAD2"><u>BridgeIRIS Portal </u></h2>
+							<h2 style="color:#FAFAD2"><u>BRiDGEIris Portal </u></h2>
 				</div>
 				</div>
 			<div class="row">
 				<div class="col-md-8">
-					<strong>Email: </strong>Dipankar.Sengupta@vub.ac.be
+					<strong>Email: </strong>Didier.Croes@uzbrussel.be
 					&nbsp;&nbsp;
-					<strong>Support: </strong>+32-465833483
+					<strong>Support: </strong>+32-24779051
 				</div>
 			</div>
 		</div>
@@ -54,30 +54,13 @@ $logout = "You have successfully logged off. To access the database, kindly logi
 	<hr>
 	<span><b><center><?php echo $logout; ?></b></center></span>
 	<h3><center><a href = "index.php">BRiDGEIRIS Portal</a><center><h3>
-</div>
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-</div>
- <!-- CONTENT-WRAPPER SECTION END-->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12" align = "center">
-                    &copy; 2015 <a href="http://bridgeiris.ibsquare.be/" target="_blank"> BridgeIRIS </a> | Powered By : <a href="http://www.innoviris.be/" target="_blank">INNOVIRIS</a>
-                </div>
 
-            </div>
-        </div>
-    </footer>
-    <!-- FOOTER SECTION END-->
-    <!-- JAVASCRIPT AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
-    <!-- CORE JQUERY SCRIPTS -->
-    <script src="assets/js/jquery-1.11.1.js"></script>
-    <!-- BOOTSTRAP SCRIPTS  -->
-    <script src="assets/js/bootstrap.js"></script>
-</body>
+
+
+ <?php include('footer.php');?>
 </html>

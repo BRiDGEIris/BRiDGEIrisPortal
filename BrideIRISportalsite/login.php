@@ -29,7 +29,7 @@ $password = mysql_real_escape_string($password);
 $db = mysql_select_db($database, $connection);
 
 // SQL query to fetch information of registerd users and finds user match.
-$query = mysql_query("select * from login where password='$password' AND username='$username'", $connection);
+$query = mysql_query("select * from login_portal where password='$password' AND username='$username'", $connection);
 $rows = mysql_num_rows($query);
 if ($rows == 1) {
 $_SESSION['login_user']=$username; // Initializing Session

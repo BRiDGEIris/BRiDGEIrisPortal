@@ -32,14 +32,14 @@ include('login.php'); // Login Script
         <div class="container">
         	<div class="row" align = "center">
         	<div class="col-md-12">
-		                    <h2 style="color:#FAFAD2"><u>BridgeIRIS Portal </u></h2>
+		                    <h2 style="color:#FAFAD2"><u>BRiDGEIris Portal </u></h2>
                 </div>
                 </div>
             <div class="row">
                 <div class="col-md-8">
-                    <strong>Email: </strong>Dipankar.Sengupta@vub.ac.be
+                    <strong>Email: </strong>Didier.Croes@uzbrussel.be
                     &nbsp;&nbsp;
-                    <strong>Support: </strong>+32-465833483
+                    <strong>Support: </strong>+32-24779051
                 </div>
             </div>
         </div>
@@ -53,15 +53,15 @@ include('login.php'); // Login Script
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://bridgeiris.ibsquare.be/">
+                <a class="navbar-brand" href="http://bridgeiris.ibsquare.be/" target = "_blank">
 
-                    <img src="assets/img/ib2_logo.jpg" />
+                    <img src="assets/img/ib2_logo.jpg"/>
                 </a>
 
             </div>
 
             <div align = "right" class="left-div">
-                <i class="fa fa-user-plus login-icon" ></i>
+                <a href = "registration.php" target = "_blank"><i class="fa fa-user-plus login-icon"></i></a>
         </div>
             </div>
         </div>
@@ -80,7 +80,7 @@ include('login.php'); // Login Script
             <div class="row">
                 <div class="col-md-6">
                     <hr />
-                     <h4> Login with <strong>BridgeIRIS Account  :</strong></h4>
+                     <h4> Login with your <strong>BRiDGEIris Portal Account  :</strong></h4>
                     <br />
                      <form action="" method="post">
 						  <label>Enter User ID : </label>
@@ -97,30 +97,31 @@ include('login.php'); // Login Script
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-info">
-                        You need to be registered to access the portal. To get access contact administrator.
-                        <br />
-                         <strong> About BridgeIRIS :</strong>
+                         <strong> About BRiDGEIris Portal:</strong>
                         <ul>
-                            <li>
-                                Supports the requirements of Clinicians and Genetic Centers
+                        	<li>
+                        		You need to be registered to access the portal. <a target = "_blank" href = "registration.php" > <font color="red"><b>Register Here</b></font></a>.
+                        	</li>
+                        	<li>
+								Gateway to access databases and tools developed in the BRiDGEIris project.
                             </li>
                             <li>
-                                Easy to use
+                                Supports the requirements of Clinicians and Genetic Centers.
                             </li>
                             <li>
-                                Supports Genomic Data (Highlander), Clinical Data (CliniPhenome)
+                                Supports Genomic Data (Highlander), Clinical Data (CliniPhenome).
+                            </li>
+							<li>
+								Access to database for Digenic Diseases (DIDA).
                             </li>
                             <li>
-                                Tools to analyze the variants and pathological classification
-                            </li>
-                            <li>
-								Access to database for Digenic Diseases (DIDA)
+                                Tools to analyze: Rank the variants and pathogenic classification (Five Class).
                             </li>
                         </ul>
 
                     </div>
                     <div class="alert alert-success">
-                         <strong> Instructions To Use:</strong>
+                         <strong> Have a Query:</strong>
                         <ul>
                             <li>
                                Contact administrator for the details
@@ -133,22 +134,5 @@ include('login.php'); // Login Script
             </div>
         </div>
     </div>
-    <!-- CONTENT-WRAPPER SECTION END-->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12" align = "center">
-                    &copy; 2015 <a href="http://bridgeiris.ibsquare.be/" target="_blank"> BridgeIRIS </a> | Powered By : <a href="http://www.innoviris.be/" target="_blank">INNOVIRIS</a>
-                </div>
-
-            </div>
-        </div>
-    </footer>
-    <!-- FOOTER SECTION END-->
-    <!-- JAVASCRIPT AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
-    <!-- CORE JQUERY SCRIPTS -->
-    <script src="assets/js/jquery-1.11.1.js"></script>
-    <!-- BOOTSTRAP SCRIPTS  -->
-    <script src="assets/js/bootstrap.js"></script>
-</body>
+    <?php include('footer.php');?>
 </html>
