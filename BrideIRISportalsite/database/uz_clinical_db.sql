@@ -268,7 +268,8 @@ CREATE TABLE `login` (
   `username` varchar(10) NOT NULL,
   `password` varchar(10) NOT NULL,
   `usertype` varchar(20) NOT NULL,
-  `name` varchar(45) NOT NULL default '',
+  `name` varchar(50) NOT NULL default '',
+  `email` varchar(80) NOT NULL default '',
   PRIMARY KEY  (`sr_no`,`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -279,9 +280,33 @@ CREATE TABLE `login` (
 
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
 LOCK TABLES `login` WRITE;
-INSERT INTO `login` VALUES (1,'dipankar','hello123','admin','Dipankar Sengupta');
+INSERT INTO `login` VALUES (1,'dipankar','hello123','admin','Dipankar Sengupta',''),(2,'hello','hello123','admin','Dip','');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
+
+--
+-- Table structure for table `login_portal`
+--
+
+DROP TABLE IF EXISTS `login_portal`;
+CREATE TABLE `login_portal` (
+  `name` varchar(50) NOT NULL default '',
+  `email` varchar(80) NOT NULL default '',
+  `username` varchar(10) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  PRIMARY KEY  (`username`,`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login_portal`
+--
+
+
+/*!40000 ALTER TABLE `login_portal` DISABLE KEYS */;
+LOCK TABLES `login_portal` WRITE;
+INSERT INTO `login_portal` VALUES ('Dipankar Sengupta','dipankarsengupta.1982@gmail.com','dipankar','bithika@12398'),('test','test!@test.com','test','test123');
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `login_portal` ENABLE KEYS */;
 
 --
 -- Table structure for table `measurement_binary`

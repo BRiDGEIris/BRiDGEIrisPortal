@@ -5,7 +5,7 @@ session_start(); // Starting Session
 $error=''; // Variable To Store Error Message
 if (isset($_POST['submit'])) {
 if (empty($_POST['username']) || empty($_POST['password'])) {
-$error = "Username or Password is invalid";
+$error = "Username or Password is EMPTY!!!";
 }
 else
 {
@@ -29,16 +29,15 @@ $password = mysql_real_escape_string($password);
 $db = mysql_select_db($database, $connection);
 
 // SQL query to fetch information of registerd users and finds user match.
-$query = mysql_query("select * from login_portal where password='$password' AND username='$username'", $connection);
+$query = mysql_query("select * from login where password='$password' AND username='$username'", $connection);
+
 $rows = mysql_num_rows($query);
-if ($rows == 1) {
-$_SESSION['login_user']=$username; // Initializing Session
-if($usertype == "admin"){
-header("location: ClinicalDBHome.php"); // Redirecting To Admin Page
-}
-else {header("location: home.php"); // Redirecting To Anonymous Page
-}
-} else {
+if ($rows == 1)  {
+				$_SESSION['login_user']=$username; // Initializing Session
+				header("location: home.php"); // Redirecting To Dashboard
+
+				}
+else {
 $error = "Username or Password is invalid.";
 }
 mysql_close($connection); // Closing Connection

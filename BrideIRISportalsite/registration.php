@@ -25,7 +25,7 @@ if (isset($_POST['submit']))
 		$db = mysql_select_db($database, $connection);
 
 	//INSERT
-		 $query = "INSERT INTO login_portal"."(name, email, username, password)"."VALUES ('$name', '$email', '$username', '$password')";
+		 $query = "INSERT INTO login"."(name, email, username, password)"."VALUES ('$name', '$email', '$username', '$password')";
 		 $result = mysql_query($query);
 
 		if(! $result )
@@ -35,7 +35,7 @@ if (isset($_POST['submit']))
 		}
 		else
 		{
-		$query1 = "SELECT * FROM login_portal WHERE username = '$username'";
+		$query1 = "SELECT * FROM login WHERE username = '$username'";
 		$result1 = mysql_query($query1);
 			while($row = mysql_fetch_array($result1, MYSQL_ASSOC))
 			   {
