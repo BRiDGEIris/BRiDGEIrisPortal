@@ -10,7 +10,7 @@ Requirements:<br>
 3. Mysql - 5.0 or above<br><br>
 
 For database installation: <br>
-refer to README.md in /database_dump/.<br><br>
+refer to README.md (<a href = "https://github.com/BRiDGEIris/BRiDGEIrisPortal/blob/master/BrideIRISportalsite/database/Readme.md">README.md</a>) in /database_dump/.<br><br>
 
 For website installation and configuration: <br>
 1. If you already have a Apache server running on the system, copy the entire BrideIRISportalsite folder in htdocs - ...\Apache2.2\htdocs\...  Else install Apache server and proced further.<br>
