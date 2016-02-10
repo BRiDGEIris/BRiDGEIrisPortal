@@ -13,11 +13,12 @@ refer to README.md (../code/database/Readme.md) in /database_dump/.<br><br>
 1. If you already have a Apache server running on the system, copy the entire BrideIRISportalsite folder in htdocs - ...\Apache2.2\htdocs\...  Else install Apache server and proced further.<br>
 2. Database Configuration Parameters - <br>
 Configure the database settings, by defining the db configuration for the system to be accessed by the GUI. <br>
-Go to db_config.php (../code/db_config.php) * [Configuration](../master/doc/configuration.md) and change your database info:-<br>
+Go to db_config.php (../code/db_config.php)  and change your database info:-<br>
 'servername' => '', <br>
 'dbuser' => '', <br>
 'dbpassword' => '', <br>
 'database' => ''<br>
+*[Configuration](../master/doc/configuration.md)
 3. Web Configuration Parameters - <br>
 URL of the resources being referred by the portal can be reconfigured by changing the URLs defined as variables in weburl_config.php ( ../code/weburl_config.php)
 </p>
