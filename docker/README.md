@@ -5,7 +5,6 @@ output: html_document
 
 ### Files
 
-* portal.conf: Configuration variables
 * Dockerfile: script for creating Docker container
 * build.sh: Builds the container
 
@@ -17,20 +16,20 @@ run
 (sudo) build.sh
 ```
 
-This creates a container named 'portal'
+This creates a container named 'bridgeirisportal'
 
 ### Start container
 
 run
 
 ```
-(sudo) docker run -p 80:80 -it portal
+(sudo) docker run -p 81:80 -it bridgeirisportal
 ```
 
 ### Connect from Browser
 
-On Linux, CliniPhenome is accessible at http://127.0.0.1
-
+On Linux, BridgeIris portal is accessible at http://192.168.99.100/ 
+On Windows, BridgeIris portal is accessible at http://localhost/ 
 If on Mac or Windows, check IP of VM with 
 
 ```
