@@ -1,5 +1,5 @@
 # BRiDGEIris Portal Installation
-<p align = "justify">
+
 <b><u>BRiDGEIris Portal: Installation on a new system. </u></b><br><br>
 <b>Requirements:</b><br>
 1. Apache server - 2.2 or above<br>
@@ -22,5 +22,4 @@ Go to db_config.php (../code/db_config.php)  and change your database info:-<br>
 
 3. Web Configuration Parameters - <br>
 URL of the resources being referred by the portal can be reconfigured by changing the URLs defined as variables in weburl_config.php ( ../code/weburl_config.php)
-</p>
-*[Configuration](../master/doc/configuration.md)
+
