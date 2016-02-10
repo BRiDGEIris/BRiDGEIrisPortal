@@ -1,6 +1,6 @@
 # BRiDGEIris Portal Installation
 <p align = "justify">
-<b><u>BRiDGEIris Portal: Installation on a new system. </u></b><br>
+<b><u>BRiDGEIris Portal: Installation on a new system. </u></b><br><br>
 <b>Requirements:</b><br>
 1. Apache server - 2.2 or above<br>
 2. PHP - 5.3 or above<br>
