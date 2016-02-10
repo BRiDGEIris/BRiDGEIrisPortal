@@ -7,7 +7,7 @@
 3. Mysql - 5.0 or above<br><br>
 
 <b>For database installation: </b><br>
-refer to README.md (../code/database/Readme.md) in /database_dump/.<br><br>
+refer to *[Database README.md](../code/database/Readme.md) in ../code/database_dump/.<br><br>
 
 <b>For website installation and configuration: </b><br>
 1. If you already have a Apache server running on the system, copy the entire "code" folder in htdocs - ...\Apache2.2\htdocs\...  <br>Else<br> install Apache server and proced further.<br><br>
