@@ -28,8 +28,8 @@ run
 
 ### Connect from Browser
 
-On Linux, BridgeIris portal is accessible at http://192.168.99.100/ 
-On Windows, BridgeIris portal is accessible at http://localhost/ 
+On Linux, BridgeIris portal is accessible at http://192.168.99.100/  <br>
+On Windows, BridgeIris portal is accessible at http://localhost/ <br>
 If on Mac or Windows, check IP of VM with 
 
 ```
