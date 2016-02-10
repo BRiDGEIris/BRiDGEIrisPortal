@@ -1,23 +1,30 @@
-FROM centos:centos6
+FROM ubuntu:ubuntu14_04
 
-# install http
-RUN  yum install -y http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+# install apache
+sudo apt-get install apache2
 
-# install httpd
-RUN yum -y install httpd vim-enhanced bash-completion unzip git nano
+# install updates
+sudo service apache2 restart
+
+# install nano
+sudo apt-get install nano
 
 # install mysql
-RUN yum install -y mysql mysql-server
-RUN echo "NETWORKING=yes" > /etc/sysconfig/network
+sudo apt-get install mysql-server-5.5
+#Create a password for root (prompt during installation)
 
 # install php
-RUN yum install -y php php-mysql php-devel php-gd php-pecl-memcache php-pspell php-snmp php-xmlrpc php-xml
-RUN yum install -y phpmyadmin
+sudo apt-get install php5 php-pear
+sudo apt-get install php5-mysql
+mkdir /var/log/php
+chown www-data /var/log/php
 
+#restart apache server
+service apache2 start
 
-
-# Add CliniPhenome DB dump, Website, and api_file 
-ADD BRiDGEIrisPortal/BrideIRISportalsite /var/www/html
+# Add BridgeIris Portal Website, Database
+ADD BRiDGEIrisPortal/codes/database_dump/uz_clinical_db.sql /
+ADD BRiDGEIrisPortal/codes /var/www/html
 
 #Start script: Start httpd and mysqld, load DB dump 
 ADD startup.sh /usr/bin/startup.sh
